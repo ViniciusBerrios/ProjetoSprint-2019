@@ -36,7 +36,7 @@ VALUES('Adm'),('Medico'),('Paciente')
 
 INSERT INTO USUARIOS(EMAIL,SENHA,ID_TIPO_USUARIO)
 VALUES('@.com.br','123',1)
-,('@spmedicalgroup.com.br','medico321',2)
+,('ricardo@spmedicalgroup.com.br','medico321',2)
 ,('@adm.com.br','adm123',3)
 
 INSERT INTO MEDICOS(CRM, NOME, ID_USUARIO, ID_ESPECIALIDADE, ID_CLINICA)
@@ -64,7 +64,3 @@ VALUES(7,4,'20/01/2019 15:00',2,'Gripe')
 ,(4,2,'07/02/2019 11:00',3,NULL)
 ,(7,4,'08/02/2019 15:00',1,NULL)
 ,(4,2,'09/02/2019 11:00',1,NULL)
-
-
-BACKUP DATABASE BACKUP_Sprint1_2019
-TO DISK = 'C:\Backup_Sprint1_2019\BDsprint1.BAK'
