@@ -11,5 +11,7 @@ namespace Sprint2Projeto.Interfaces
         void Cadastrar(Usuarios usuario);
 
         List<Usuarios> Listar();
+
+        Usuarios BuscarPorEmailESenha(string email, string senha);
     }
 }

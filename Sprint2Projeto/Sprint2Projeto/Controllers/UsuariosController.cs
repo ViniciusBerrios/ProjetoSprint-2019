@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Sprint2Projeto.Domains;
+using Sprint2Projeto.Interfaces;
+using Sprint2Projeto.Repositories;
 
 namespace Sprint2Projeto.Controllers
 {
@@ -13,6 +16,13 @@ namespace Sprint2Projeto.Controllers
     [ApiController]
     public class UsuariosController : ControllerBase
     {
+        private IUsuarioRepository UsuarioRepository { get; set; }
+
+        public UsuariosController()
+        {
+            UsuarioRepository = new UsuarioRepository();
+        }
+
         [HttpGet]
         public IActionResult ListarUsuarios()
         {
@@ -29,6 +39,7 @@ namespace Sprint2Projeto.Controllers
             }
         }
 
+        [Authorize(Roles = "Adm")]
         [HttpPost]
         public IActionResult Cadastrar(Usuarios usuario)
         {

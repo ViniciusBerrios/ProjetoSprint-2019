@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Sprint2Projeto.Domains;
@@ -29,6 +30,7 @@ namespace Sprint2Projeto.Controllers
             }
         }
 
+        [Authorize(Roles = "Adm")]
         [HttpPost]
         public IActionResult Cadastrar(Consultas consulta)
         {
@@ -47,6 +49,7 @@ namespace Sprint2Projeto.Controllers
             }
         }
 
+        [Authorize(Roles = "Adm")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {

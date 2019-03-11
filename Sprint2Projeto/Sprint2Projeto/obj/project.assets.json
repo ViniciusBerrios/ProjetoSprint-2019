@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\50068691866\\Desktop\\Sprint2Projeto\\Sprint2Projeto\\Sprint2Projeto.csproj",
+      "projectUniqueName": "C:\\Users\\50068691866\\Desktop\\ProjetoSprint1-2019\\Sprint2Projeto\\Sprint2Projeto\\Sprint2Projeto.csproj",
       "projectName": "Sprint2Projeto",
-      "projectPath": "C:\\Users\\50068691866\\Desktop\\Sprint2Projeto\\Sprint2Projeto\\Sprint2Projeto.csproj",
+      "projectPath": "C:\\Users\\50068691866\\Desktop\\ProjetoSprint1-2019\\Sprint2Projeto\\Sprint2Projeto\\Sprint2Projeto.csproj",
       "packagesPath": "C:\\Users\\50068691866\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\50068691866\\Desktop\\Sprint2Projeto\\Sprint2Projeto\\obj\\",
+      "outputPath": "C:\\Users\\50068691866\\Desktop\\ProjetoSprint1-2019\\Sprint2Projeto\\Sprint2Projeto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

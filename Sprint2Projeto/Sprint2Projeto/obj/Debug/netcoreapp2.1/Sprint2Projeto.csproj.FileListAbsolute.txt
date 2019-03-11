@@ -12,3 +12,17 @@ C:\Users\50068691866\Desktop\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2
 C:\Users\50068691866\Desktop\Sprint2Projeto\Sprint2Projeto\bin\Debug\netcoreapp2.1\Sprint2Projeto.pdb
 C:\Users\50068691866\Desktop\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2.1\Sprint2Projeto.dll
 C:\Users\50068691866\Desktop\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2.1\Sprint2Projeto.pdb
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\bin\Debug\netcoreapp2.1\Sprint2Projeto.deps.json
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\bin\Debug\netcoreapp2.1\Sprint2Projeto.runtimeconfig.json
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\bin\Debug\netcoreapp2.1\Sprint2Projeto.runtimeconfig.dev.json
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\bin\Debug\netcoreapp2.1\Sprint2Projeto.dll
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\bin\Debug\netcoreapp2.1\Sprint2Projeto.pdb
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2.1\Sprint2Projeto.csprojAssemblyReference.cache
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2.1\Sprint2Projeto.csproj.CoreCompileInputs.cache
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2.1\Sprint2Projeto.RazorAssemblyInfo.cache
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2.1\Sprint2Projeto.RazorAssemblyInfo.cs
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2.1\Sprint2Projeto.AssemblyInfoInputs.cache
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2.1\Sprint2Projeto.AssemblyInfo.cs
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2.1\Sprint2Projeto.RazorTargetAssemblyInfo.cache
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2.1\Sprint2Projeto.dll
+C:\Users\50068691866\Desktop\ProjetoSprint1-2019\Sprint2Projeto\Sprint2Projeto\obj\Debug\netcoreapp2.1\Sprint2Projeto.pdb

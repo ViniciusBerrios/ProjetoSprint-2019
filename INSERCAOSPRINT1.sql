@@ -68,3 +68,7 @@ VALUES(7,4,'20/01/2019 15:00',2,'Gripe')
 SELECT * FROM CONSULTAS
 
 SELECT * FROM MEDICOS
+
+update usuarios
+  set ID_TIPO_USUARIO = 1
+  where id =3;
