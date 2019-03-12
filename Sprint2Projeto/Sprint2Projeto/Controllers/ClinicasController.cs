@@ -32,6 +32,26 @@ namespace Sprint2Projeto.Controllers
             }
         }
 
+        [Authorize(Roles = "Adm")]
+        [HttpPost]
+        public IActionResult Cadastar (Clinicas clinica)
+        {
+            try
+            {
+                using (Sprint1_2019Context ctx = new Sprint1_2019Context())
+                {
+                    ctx.Clinicas.Add(clinica);
+                    ctx.SaveChanges();
+                }
+                    return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
+        }
+
+        [Authorize(Roles = "Adm")]
         [HttpPut]
         public IActionResult Alterar(Clinicas clinica)
         {
@@ -48,6 +68,32 @@ namespace Sprint2Projeto.Controllers
 
                     clinicaExiste.Nome = clinica.Nome;
                     ctx.Clinicas.Update(clinicaExiste);
+                    ctx.SaveChanges();
+                }
+                    return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
+        }
+
+        [Authorize(Roles = "Adm")]
+        [HttpDelete("{id}")]
+        public IActionResult Deletar (int id)
+        {
+            try
+            {
+                using (Sprint1_2019Context ctx = new Sprint1_2019Context())
+                {
+                    Clinicas clinicaProcurado = ctx.Clinicas.Find(id);
+
+                    if(clinicaProcurado == null)
+                    {
+                        return NotFound();
+                    }
+
+                    ctx.Clinicas.Remove(clinicaProcurado);
                     ctx.SaveChanges();
                 }
                     return Ok();

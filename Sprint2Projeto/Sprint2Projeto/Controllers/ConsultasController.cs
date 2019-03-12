@@ -75,6 +75,7 @@ namespace Sprint2Projeto.Controllers
             }
         }
 
+        [Authorize(Roles = "Adm")]
         [HttpPut]
         public IActionResult Alterar(Consultas consulta)
         {

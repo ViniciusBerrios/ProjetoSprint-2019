@@ -11,6 +11,11 @@ namespace Sprint2Projeto.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
+        public void Alterar(Usuarios usuario)
+        {
+            throw new NotImplementedException();
+        }
+
         public Usuarios BuscarPorEmailESenha(string email, string senha)
         {
             using (Sprint1_2019Context ctx = new Sprint1_2019Context())
@@ -25,6 +30,11 @@ namespace Sprint2Projeto.Repositories
         }
 
         public void Cadastrar(Usuarios usuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Deletar(int id)
         {
             throw new NotImplementedException();
         }

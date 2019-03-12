@@ -13,5 +13,9 @@ namespace Sprint2Projeto.Interfaces
         List<Usuarios> Listar();
 
         Usuarios BuscarPorEmailESenha(string email, string senha);
+
+        void Deletar(int id);
+
+        void Alterar(Usuarios usuario);
     }
 }

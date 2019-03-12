@@ -14,6 +14,11 @@ namespace Sprint2Projeto.Repositories
             throw new NotImplementedException();
         }
 
+        public void Cadastrar(Clinicas clinica)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Deletar(int id)
         {
             throw new NotImplementedException();

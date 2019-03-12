@@ -58,5 +58,60 @@ namespace Sprint2Projeto.Controllers
                 return BadRequest();
             }
         }
+
+        [Authorize(Roles = "Adm")]
+        [HttpDelete("{id}")]
+        public IActionResult Deletar (int id)
+        {
+            try
+            {
+                using (Sprint1_2019Context ctx = new Sprint1_2019Context())
+                {
+                    Usuarios usuarioProcurado = ctx.Usuarios.Find(id);
+
+                    if(usuarioProcurado == null)
+                    {
+                        return NotFound();
+                    }
+
+                    ctx.Usuarios.Remove(usuarioProcurado);
+                    ctx.SaveChanges();
+                }
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
+        }
+
+        [Authorize(Roles = "Adm")]
+        [HttpPut]
+        public IActionResult Alterar (Usuarios usuario)
+        {
+            try
+            {
+                using (Sprint1_2019Context ctx = new Sprint1_2019Context())
+                {
+                    Usuarios usuarioExiste = ctx.Usuarios.Find(usuario.Id);
+
+                    if(usuarioExiste == null)
+                    {
+                        return NotFound();
+                    }
+
+                    usuarioExiste.Email = usuario.Email;
+                    ctx.Usuarios.Update(usuarioExiste);
+                    ctx.SaveChanges();
+                }
+                    return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
+        }
+
     }
 }

@@ -8,6 +8,7 @@ namespace Sprint2Projeto.Interfaces
 {
     interface IClinicaRepository
     {
+        void Cadastrar(Clinicas clinica);
 
         void Deletar(int id);
 
