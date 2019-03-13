@@ -9,6 +9,7 @@ namespace Sprint2Projeto.Repositories
 {
     public class ConsultaRepository : IConsultaRepository
     {
+
         public void Alterar(Consultas consulta)
         {
             throw new NotImplementedException();
@@ -24,9 +25,33 @@ namespace Sprint2Projeto.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Consultas> Listar()
+        public List<Consultas> ListarConsultas(int id, string idTipoUsuario)
         {
-            throw new NotImplementedException();
+            using (Sprint1_2019Context ctx = new Sprint1_2019Context())
+            {
+                if (idTipoUsuario == "Adm")
+                {
+                    ctx.Consultas.ToList();
+                }
+
+                if (idTipoUsuario == "Medico")
+                {
+                    Medicos medico;
+                    medico = ctx.Medicos.FirstOrDefault(x => x.IdUsuario == id);
+
+                    return ctx.Consultas.Where(x => x.IdMedico == medico.Id).ToList();
+                }
+
+                if (idTipoUsuario == "Paciente")
+                {
+                    Prontuario prontuario;
+                    prontuario = ctx.Prontuario.FirstOrDefault(x => x.IdUsuario == id);
+
+                    return ctx.Consultas.Where(x => x.IdProntuario == prontuario.Id).ToList();
+                }
+
+                return null;
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Sprint2Projeto.Interfaces
     {
         void Cadastrar(Consultas consulta);
 
-        List<Consultas> Listar();
+        List<Consultas> ListarConsultas(int id, string idTipoUsuario);
 
         void Deletar(int id);
 

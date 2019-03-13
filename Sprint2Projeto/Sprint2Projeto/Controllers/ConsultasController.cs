@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Sprint2Projeto.Domains;
+using Sprint2Projeto.Interfaces;
+using Sprint2Projeto.Repositories;
 
 namespace Sprint2Projeto.Controllers
 {
@@ -14,15 +18,22 @@ namespace Sprint2Projeto.Controllers
     [ApiController]
     public class ConsultasController : ControllerBase
     {
+        private IConsultaRepository ConsultaRepository { get; set; }
+
+        public ConsultasController()
+        {
+            ConsultaRepository = new ConsultaRepository();
+        }
+
+        [Authorize]
         [HttpGet]
         public IActionResult ListarConsultas()
         {
             try
             {
-                using (Sprint1_2019Context ctx = new Sprint1_2019Context())
-                {
-                    return Ok(ctx.Consultas.ToList());
-                }
+                int id = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+                string idTipoUsuario = Convert.ToString(HttpContext.User.Claims.First(c => c.Type == ClaimTypes.Role).Value);
+                return Ok(ConsultaRepository.ListarConsultas(id, idTipoUsuario));
             }
             catch (Exception ex)
             {
