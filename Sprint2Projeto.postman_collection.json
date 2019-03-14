@@ -1,0 +1,296 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sprint2Projeto",
+		"_postman_id": "86c4e446-09a9-1c8b-357e-b72695cc8c9e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/Usuarios",
+			"request": {
+				"url": "http://localhost:5000/api/Usuarios",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Usuarios",
+			"request": {
+				"url": "http://localhost:5000/api/Usuarios",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkBhZG0uY29tLmJyIiwianRpIjoiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbSIsImV4cCI6MTU1MjU4NTI3NiwiaXNzIjoiU3ByaW50MlByb2pldG8iLCJhdWQiOiJTcHJpbnQyUHJvamV0byJ9.TarpgRuDigzE4Qziy_PDE7jEkufX8rdpAucE2Ik4h4Q",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"email\": \"eitaa@.com.br\",\n        \"senha\": \"123\",\n        \"idTipoUsuario\": 1,\n        \"medicos\": [],\n        \"prontuario\": []\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Usuarios",
+			"request": {
+				"url": "http://localhost:5000/api/Usuarios",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkBhZG0uY29tLmJyIiwianRpIjoiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbSIsImV4cCI6MTU1MjQyMDIyNCwiaXNzIjoiU3ByaW50MlByb2pldG8iLCJhdWQiOiJTcHJpbnQyUHJvamV0byJ9.Beit9Ba72fgP4ZVFaBToGbwrETQH_uJdDXVAhesT7yE",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 11,\n        \"email\": \"viniberrios@gmail.com\",\n        \"senha\": \"123\",\n        \"idTipoUsuario\": 3,\n        \"medicos\": [],\n        \"prontuario\": []\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Usuarios/9",
+			"request": {
+				"url": "http://localhost:5000/api/Usuarios/13",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkBhZG0uY29tLmJyIiwianRpIjoiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbSIsImV4cCI6MTU1MjU4NTI3NiwiaXNzIjoiU3ByaW50MlByb2pldG8iLCJhdWQiOiJTcHJpbnQyUHJvamV0byJ9.TarpgRuDigzE4Qziy_PDE7jEkufX8rdpAucE2Ik4h4Q",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Consultas",
+			"request": {
+				"url": "http://localhost:5000/api/Consultas",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvYmVydG9Ac3BtZWRpY2FsZ3JvdXAuY29tLmJyIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Ik1lZGljbyIsImV4cCI6MTU1MjU4NjYzMCwiaXNzIjoiU3ByaW50MlByb2pldG8iLCJhdWQiOiJTcHJpbnQyUHJvamV0byJ9.D80-fSbkGZoVn_UDYCmuHMu1KxhtIGLNB-hXKVZI_zE",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Consultas",
+			"request": {
+				"url": "http://localhost:5000/api/Consultas",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkBhZG0uY29tLmJyIiwianRpIjoiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbSIsImV4cCI6MTU1MjQyMDIyNCwiaXNzIjoiU3ByaW50MlByb2pldG8iLCJhdWQiOiJTcHJpbnQyUHJvamV0byJ9.Beit9Ba72fgP4ZVFaBToGbwrETQH_uJdDXVAhesT7yE",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"idProntuario\": 6,\n        \"idMedico\": 4,\n        \"dataConsulta\": \"2019-01-20T15:00:00\",\n        \"idSituacao\": 3,\n        \"descricao\": \"Doença Pigmentada da Aranha\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Consultas",
+			"request": {
+				"url": "http://localhost:5000/api/Consultas",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkBhZG0uY29tLmJyIiwianRpIjoiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbSIsImV4cCI6MTU1MjQyMDIyNCwiaXNzIjoiU3ByaW50MlByb2pldG8iLCJhdWQiOiJTcHJpbnQyUHJvamV0byJ9.Beit9Ba72fgP4ZVFaBToGbwrETQH_uJdDXVAhesT7yE",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 1,\n        \"idProntuario\": 7,\n        \"idMedico\": 4,\n        \"dataConsulta\": \"2019-01-20T15:00:00\",\n        \"idSituacao\": 2,\n        \"descricao\": \"Doença Novaa\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Consultas/8",
+			"request": {
+				"url": "http://localhost:5000/api/Consultas/10",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkBhZG0uY29tLmJyIiwianRpIjoiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbSIsImV4cCI6MTU1MjQyMDIyNCwiaXNzIjoiU3ByaW50MlByb2pldG8iLCJhdWQiOiJTcHJpbnQyUHJvamV0byJ9.Beit9Ba72fgP4ZVFaBToGbwrETQH_uJdDXVAhesT7yE",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Clinicas",
+			"request": {
+				"url": "http://localhost:5000/api/Clinicas",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkBhZG0uY29tLmJyIiwianRpIjoiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbSIsImV4cCI6MTU1MjU4NTI3NiwiaXNzIjoiU3ByaW50MlByb2pldG8iLCJhdWQiOiJTcHJpbnQyUHJvamV0byJ9.TarpgRuDigzE4Qziy_PDE7jEkufX8rdpAucE2Ik4h4Q",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Clinicas",
+			"request": {
+				"url": "http://localhost:5000/api/Clinicas",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkBhZG0uY29tLmJyIiwianRpIjoiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbSIsImV4cCI6MTU1MjQyMDIyNCwiaXNzIjoiU3ByaW50MlByb2pldG8iLCJhdWQiOiJTcHJpbnQyUHJvamV0byJ9.Beit9Ba72fgP4ZVFaBToGbwrETQH_uJdDXVAhesT7yE",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"nome\": \"Clinica Vinizaum\",\n        \"endereco\": \"Av Barão Limeira 532 SP\",\n        \"cnpj\": \"86400902000133\",\n        \"razaoSocial\": \"RJ\",\n        \"horarioFuncionamento\": 22,\n        \"medicos\": []\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Clinicas",
+			"request": {
+				"url": "http://localhost:5000/api/Clinicas",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkBhZG0uY29tLmJyIiwianRpIjoiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbSIsImV4cCI6MTU1MjQyMDIyNCwiaXNzIjoiU3ByaW50MlByb2pldG8iLCJhdWQiOiJTcHJpbnQyUHJvamV0byJ9.Beit9Ba72fgP4ZVFaBToGbwrETQH_uJdDXVAhesT7yE",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 15,\n        \"nome\": \"Clinica Vini\",\n        \"endereco\": \"Av Barão Limeira 532 SP\",\n        \"cnpj\": \"86400902000133\",\n        \"razaoSocial\": \"RJ\",\n        \"horarioFuncionamento\": 22,\n        \"medicos\": []\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Clinicas/15",
+			"request": {
+				"url": "http://localhost:5000/api/Clinicas/15",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkBhZG0uY29tLmJyIiwianRpIjoiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbSIsImV4cCI6MTU1MjQyMDIyNCwiaXNzIjoiU3ByaW50MlByb2pldG8iLCJhdWQiOiJTcHJpbnQyUHJvamV0byJ9.Beit9Ba72fgP4ZVFaBToGbwrETQH_uJdDXVAhesT7yE",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Login",
+			"request": {
+				"url": "http://localhost:5000/api/Login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"email\": \"roberto@spmedicalgroup.com.br\",\n        \"senha\": \"medico321\"\n }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
