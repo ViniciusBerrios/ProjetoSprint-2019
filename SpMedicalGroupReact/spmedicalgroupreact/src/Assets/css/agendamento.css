@@ -92,7 +92,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.login {
+.formulario {
     flex-direction: column;
     display: flex;
 }
@@ -103,75 +103,78 @@
 }
 
 .quadrado2{
-    height: 620px;
-    width: 620px;
+    height: 416px;
+    width: 889px;
     background-color: white;
-    margin-top: -700px;
-    margin-left: 450px;
+    margin-top: 80px;
+    margin-left: 320px;
     border-radius: 20px;
 }
 
-.loga h3{
-    color: black;
+.fundo2 h3{
+    margin-top: -700px;
+    margin-left: 120px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 4em;
-    margin-left: 200px;
-    padding-top: 50px;
+    font-size: 3em;
 }
 
-.emailInput{
+.quadrado2 h4{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.7em;
-    padding-top: 50px;
-    margin-left: 150px;
-}
-
-.senhaInput{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.7em;
-    padding-top: 50px;
-    margin-left: 150px;
-}
-
-.emailInput input{
-    border-radius: 6px;
-    height: 40px;
-    margin-left: 17px;
-    padding-top: 20px;
-    width: 200px;
-}
-
-.senhaInput input{
-    border-radius: 6px;
-    height: 40px;
-    padding-top: 20px;
-    width: 200px;
-}
-
-.loga p{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 20px;
-    margin-left: 340px;
-}
-
-.botao_entrar input{
-    background: #53C160;
-    height: 50px;
-    width: 250px;
-    color: white;
-    border-radius: 10px;
-    margin-left: 190px;
+    font-size: 2.8em;
+    color: #276272;
+    margin-left: 300px;
     margin-top: 30px;
-    font-size: 1.7em;
 }
 
-.botao_cadastra input{
-    background: #53C160;
-    height: 50px;
+.prontuarioInput{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    margin-left: 230px;
+    padding-top: 35px;
+}
+
+.prontuarioInput input{
+    border-radius: 6px;
+    height: 35px;
+    width: 245px;
+    margin-left: 10px;
+}
+
+.medicoInput{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    margin-left: 230px;
+    padding-top: 25px;
+}
+
+.medicoInput input{
+    border-radius: 6px;
+    height: 35px;
     width: 250px;
+    margin-left: 32px;
+}
+
+.dataInput{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    margin-left: 230px;
+    padding-top: 25px;
+}
+
+.dataInput input{
+    border-radius: 6px;
+    height: 35px;
+    width: 200px;
+    margin-left: 10px;
+}
+
+.botao_enviar input{
+    background: #53C160;
+    height: 45px;
+    width: 200px;
     color: white;
     border-radius: 10px;
-    margin-left: 190px;
+    margin-left: 330px;
     margin-top: 50px;
-    font-size: 1.7em;
+    font-size: 1.4em;
 }

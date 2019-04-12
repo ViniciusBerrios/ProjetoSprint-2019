@@ -92,86 +92,42 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.login {
-    flex-direction: column;
-    display: flex;
-}
-
-.fundo2 img{
-    width: 100%;
-    height: 752px;
-}
-
 .quadrado2{
-    height: 620px;
-    width: 620px;
-    background-color: white;
-    margin-top: -700px;
-    margin-left: 450px;
-    border-radius: 20px;
+    height: 150px;
+    background:linear-gradient(#85C688, #0F4217);;
+    margin-top: 70px;
+    width: 1300px;
+    margin-left: 100px;
+    border-radius: 10px;
 }
 
-.loga h3{
-    color: black;
+.quadrado2 h3{
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 4em;
-    margin-left: 200px;
-    padding-top: 50px;
+    font-size: 2em;
+    margin-left: 550px;
+    padding-top: 15px;
 }
 
-.emailInput{
+.quadrado2 ul{
+    color: white;
+    list-style-type: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.7em;
-    padding-top: 50px;
-    margin-left: 150px;
+    font-size: 1.8em;
+    display: flex;
+    margin-left: 40px;
+    margin-top: 35px;
 }
 
-.senhaInput{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.7em;
-    padding-top: 50px;
-    margin-left: 150px;
+.quadrado2 li{
+    margin-left: 100px;
 }
 
-.emailInput input{
-    border-radius: 6px;
-    height: 40px;
-    margin-left: 17px;
-    padding-top: 20px;
-    width: 200px;
-}
-
-.senhaInput input{
-    border-radius: 6px;
-    height: 40px;
-    padding-top: 20px;
-    width: 200px;
-}
-
-.loga p{
-    font-family: Arial, Helvetica, sans-serif;
+.quadrado3{
+    height: 700px;
+    width: 1300px;
+    background: #2C914D;
+    margin-left: 100px;
+    border-radius: 10px;
     margin-top: 20px;
-    margin-left: 340px;
-}
-
-.botao_entrar input{
-    background: #53C160;
-    height: 50px;
-    width: 250px;
-    color: white;
-    border-radius: 10px;
-    margin-left: 190px;
-    margin-top: 30px;
-    font-size: 1.7em;
-}
-
-.botao_cadastra input{
-    background: #53C160;
-    height: 50px;
-    width: 250px;
-    color: white;
-    border-radius: 10px;
-    margin-left: 190px;
-    margin-top: 50px;
-    font-size: 1.7em;
 }
