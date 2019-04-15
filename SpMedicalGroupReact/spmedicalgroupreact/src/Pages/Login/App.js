@@ -1,94 +1,82 @@
 import React, { Component } from 'react';
-import logo from '../../Assets/img/logo.png';
+import fundo2 from '../../Assets/img/fundo2novo.jpg';
+import Topo from '../../components/Topo/topo';
 import './App.css';
-import '../../Assets/css/login.css'
+import '../../Assets/css/login.css';
+import Axios from 'axios';
 
 export default class App extends Component {
+
+    constructor(){
+        super();
+        this.state ={
+            email: '',
+            senha: ''
+        }
+    }
+
+    atualizaEstadoEmail(event){
+        this.setState({email : event.target.value});
+    }
+    atualizaEstadoSenha(event){
+        this.setState({senha : event.target.value});
+    }
+
+    fazerLogin(event){
+        event.preventDefault();
+        Axios.post('http://192.168.56.1:5000/api/Login',{
+            email: this.state.email,
+            senha: this.state.senha
+        })
+        .then(data => {
+            localStorage.setItem("Sprint2Projeto", data.data.token);
+            this.props.history.push('/cadastraconsulta');
+            console.log(data);
+        })
+        .catch(erro => {
+            console.log(erro);
+        })
+    }
+
   render() {
     return (
-      <body>
-    <header class="top">
-        <div class="banner">
-            <div class="fundo">
-                        <img src="imagens/fundo.jpg">
-            </div>
 
-            <div class="logo">
-                <img src="imagens/logo.png">
-            </div>
-
-            <div class="titulo">
-                    <h1>Medical Group</h1>
-                </div>
-
-            <div class="medicos">
-                <img src="imagens/medicos.png">
-            </div>
-
-            <div class="telefone">
-                <img src="imagens/telefone.png"> 
-                <h2>11 92345-6789</h2>
-            </div>
-
-            <div class="redessociais">
-                <div class="twitter">
-                    <img src="imagens/twitter.png">
-                </div>
-
-                <div class="facebook">
-                    <img src="imagens/face.png">
-                </div>
-
-                <div class="instagram">
-                    <img src="imagens/instagram.png">
-                </div>
-
-                <div class="linkedin">
-                    <img src="imagens/linkedin.png">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="quadrado">
-        <ul>
-            <li>Consultas</li>
-        </ul>
-    </div>
+    <div>
+    <Topo />
     
-    <section class="login">
-    <div class="fundo2">
-        <img src="imagens/fundo2novo.jpg">       
+    <section className="login">
+    <div className="fundo2">
+        <img src={fundo2} alt="fundo2 spmedical"></img>       
     </div>
-    <section class="loga">
-        <div class="quadrado2">
+    <section className="loga">
+        <div className="quadrado2">
             <h3>LOGIN</h3>
 
-        <div class="emailInput">
+        <form onSubmit={this.fazerLogin.bind(this)}>
+        <div className="emailInput">
             <label>Email:</label>
-            <input id="email" type="text" >
+            <input id="email" type="text" value={this.state.email} onChange={this.atualizaEstadoEmail.bind(this)} />
         </div>
 
-        <div class="senhaInput">
+        <div className="senhaInput">
                 <label>Senha:</label>
-                <input id="senha" type="text">
+                <input id="senha" type="text" value={this.state.senha} onChange={this.atualizaEstadoSenha.bind(this)} />
         </div>
 
         <p>Esqueceu sua Senha?</p>
 
-        <div class="botao_entrar">
-                <a href=""><input type="button" value="Entrar"></a>
+        <div className="botao_entrar">
+                <input type="submit" value="Entrar"/>
             </div>
+        </form>
 
-        <div class="botao_cadastra">
-                <a href=""><input type="button" value="Cadastrar-se"></a>
+        <div className="botao_cadastra">
+                <input type="button" value="Cadastrar-se"/>
         </div>
         </div>
     </section>
-
-       
     </section>
-    </body>
-    );
+    </div>
+    )
   }
 }

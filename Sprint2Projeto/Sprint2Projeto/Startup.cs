@@ -66,6 +66,8 @@ namespace Sprint2Projeto
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("CorsPolicy");
+
             app.UseAuthentication();
 
             app.UseMvc();
