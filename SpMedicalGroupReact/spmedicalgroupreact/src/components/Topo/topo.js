@@ -15,7 +15,7 @@ function topo(){
         <header className="top">
         <div className="banner">
             <div className="fundo">
-                        <img src={fundo} alt="fundo sp medical"></img>
+                    <img src={fundo} alt="fundo sp medical"></img>
             </div>
 
             <div className="logo">

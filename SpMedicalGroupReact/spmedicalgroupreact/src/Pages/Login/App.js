@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import fundo2 from '../../Assets/img/fundo2novo.jpg';
 import Topo from '../../components/Topo/topo';
-import './App.css';
 import '../../Assets/css/login.css';
 import Axios from 'axios';
 
@@ -24,13 +23,13 @@ export default class App extends Component {
 
     fazerLogin(event){
         event.preventDefault();
-        Axios.post('http://192.168.56.1:5000/api/Login',{
+        Axios.post('http://localhost:5000/api/Login',{
             email: this.state.email,
             senha: this.state.senha
         })
         .then(data => {
             localStorage.setItem("Sprint2Projeto", data.data.token);
-            this.props.history.push('/cadastraconsulta');
+            this.props.history.push('/cadastraConsulta');
             console.log(data);
         })
         .catch(erro => {
@@ -49,7 +48,7 @@ export default class App extends Component {
         <img src={fundo2} alt="fundo2 spmedical"></img>       
     </div>
     <section className="loga">
-        <div className="quadrado2">
+        <div className="quadrado4">
             <h3>LOGIN</h3>
 
         <form onSubmit={this.fazerLogin.bind(this)}>

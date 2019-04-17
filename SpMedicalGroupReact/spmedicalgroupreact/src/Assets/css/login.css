@@ -94,7 +94,7 @@
 
 .login {
     flex-direction: column;
-    display: flex;   
+    display: flex;
 }
 
 .fundo2 img{
@@ -102,7 +102,7 @@
     height: 752px;
 }
 
-.quadrado2{
+.quadrado4{
     height: 620px;
     width: 620px;
     background-color: white;

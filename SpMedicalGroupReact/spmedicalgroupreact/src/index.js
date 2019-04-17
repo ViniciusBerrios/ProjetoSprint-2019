@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import {usuarioAutenticado} from './services/auth';
 import{Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-dom';
 import CadastraConsulta from './Pages/CadastraConsulta/CadastraConsulta';
+import ListaConsulta from './Pages/ListaConsulta/ListaConsulta';
 
 const Permissao = ({component : Component}) => (
      <Route 
@@ -23,6 +24,7 @@ const rotas = (
             <Switch>
                 <Route exact path="/" component={App} />
                 <Permissao path="/cadastraconsulta" component={CadastraConsulta} />
+                <Permissao path="/listaconsulta" component={ListaConsulta} />
                 <Route component={NaoEncontrada} />
             </Switch>
         </div>

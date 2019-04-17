@@ -1,1 +1,1 @@
-export const usuarioAutenticado = () => localStorage.getItem("Sprint2Projeto") !=null;
+export const usuarioAutenticado = () => localStorage.getItem('Sprint2Projeto') !=null;
