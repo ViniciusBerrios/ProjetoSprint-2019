@@ -36,9 +36,21 @@ export default class CadastraConsulta extends Component{
                     <input id="data" type="text" />
                 </div>
 
+                <div className="situacaoInput">
+                    <label>Situação</label>
+                    <input id="situacao" type="text" />
+                </div>
+
+                <div className="descricaoInput">
+                    <label>Descrição</label>
+                    <input id="descricao" type="text" />
+                </div>
+
                 <div className="botao_enviar">
                     <input type="button" value="Enviar" />
                 </div>
+
+                
             </div>
     </section>
             </div>

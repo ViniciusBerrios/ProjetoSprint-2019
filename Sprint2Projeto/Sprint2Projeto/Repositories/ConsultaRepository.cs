@@ -32,6 +32,8 @@ namespace Sprint2Projeto.Repositories
                 if (idTipoUsuario == "Adm")
                 {
                     ctx.Consultas.ToList();
+
+                    return ctx.Consultas.ToList();
                 }
 
                 if (idTipoUsuario == "Medico")

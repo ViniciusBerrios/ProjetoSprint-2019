@@ -8,11 +8,11 @@ export default class ListaConsulta extends Component{
         super();
 
         this.state ={
-            IdProntuario: '',
-            IdMedico: '',
-            DataConsulta: '',
-            IdSituacao: '',
-            Descricao: '',
+            idProntuario: '',
+            idMedico: '',
+            dataConsulta: '',
+            idSituacao: '',
+            descricao: '',
             lista: []
         };
     }
@@ -21,7 +21,7 @@ export default class ListaConsulta extends Component{
         let token = localStorage.getItem("Sprint2Projeto");
         fetch('http://localhost:5000/api/Consultas',{
             headers: {
-                'Authorization' :  'Bearer' + token
+                'Authorization' : 'Bearer ' + token
             }
         })
         .then(resposta => resposta.json())
@@ -47,12 +47,14 @@ export default class ListaConsulta extends Component{
             <ul>
                     <li>Prontuário</li>
                     <li>Médico</li>
-                    <li>Data Consulta</li>/
+                    <li>Data Consulta</li>
                     <li>Situação</li>
                     <li>Descrição</li>
                 </ul>
 
             </div>
+
+        <div className="quadrado3">
 
         <table id="tabela">
         <tbody>
@@ -60,20 +62,19 @@ export default class ListaConsulta extends Component{
                 this.state.lista.map(function(consulta){
                     return(
                         <tr key={consulta.id}>
-                            <td>{consulta.Id_Prontuario}</td>
-                            <td>{consulta.Id_Medico}</td>
-                            <td>{consulta.Data_Consulta}</td>
-                            <td>{consulta.Id_Situacao}</td>
-                            <td>{consulta.Descricao}</td>
+                            <td>{consulta.idProntuario}</td>
+                            <td>{consulta.idMedico}</td>
+                            <td>{consulta.dataConsulta}</td>
+                            <td>{consulta.idSituacao}</td>
+                            <td>{consulta.descricao}</td>
                         </tr>
                     )
                 })
             }
         </tbody>
         </table>
-
-        
-        <div className="quadrado3"></div>
+  
+        </div>
 
     </section>
     
