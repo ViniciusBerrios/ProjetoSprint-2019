@@ -24,23 +24,23 @@ export default class CadastraConsulta extends Component {
     }
 
     atualizaEstadoProntuario(event) {
-        this.setState({ idProntuario: event.target.value });
+        this.setState({ idProntuario: event.target.value })
     }
 
     atualizaEstadoMedico(event) {
-        this.setState({ idMedico: event.target.value });
+        this.setState({ idMedico: event.target.value })
     }
 
     atualizaEstadoDataConsulta(event) {
-        this.setState({ dataConsulta: event.target.value });
+        this.setState({ dataConsulta: event.target.value })
     }
 
     atualizaEstadoSituacao(event) {
-        this.setState({ idSituacao: event.target.value });
+        this.setState({ idSituacao: event.target.value })
     }
 
     atualizaEstadoDescricao(event) {
-        this.setState({ descricao: event.target.value });
+        this.setState({ descricao: event.target.value })
     }
 
     cadastrarConsulta(event) {
@@ -52,16 +52,18 @@ export default class CadastraConsulta extends Component {
             body: JSON.stringify({
                 idProntuario: this.state.idProntuario,
                 idMedico: this.state.idMedico,
-                dataConsulta: this.setState.dataConsulta,
+                dataConsulta: this.state.dataConsulta,
                 idSituacao: this.state.idSituacao,
                 descricao: this.state.descricao
             }),
             headers: {
-                'Authorization': 'Bearer ' + token
+                'Authorization': 'Bearer ' + token,
+                'Content-Type' : 'application/json'
             }
         })
-            .then(response => console.log(response))
-            .catch(erro => console.log(erro))
+        .then(response => response)
+        .then(data => console.log(data))
+        .catch(erro => console.log(erro))
     }
 
     render() {
@@ -93,7 +95,7 @@ export default class CadastraConsulta extends Component {
 
                             <div className="dataInput">
                                 <label>Data Consulta</label>
-                                <input id="data" type="text" value={this.state.dataConsulta} onChange={this.atualizaEstadoDataConsultaForm} placeholder="Data da Consulta" />
+                                <input id="data" type="date" value={this.state.dataConsulta} onChange={this.atualizaEstadoDataConsultaForm} placeholder="Data da Consulta" />
                             </div>
 
                             <div className="situacaoInput">
@@ -105,11 +107,11 @@ export default class CadastraConsulta extends Component {
                                 <label>Descrição</label>
                                 <input id="descricao" type="text" value={this.state.descricao} onChange={this.atualizaEstadoDescricaoForm} placeholder="Descrição" />
                             </div>
-                        </form>
 
                         <div className="botao_enviar">
-                            <input type="submit" value="Enviar" />
+                            <button type="submit">Enviar</button>
                         </div>
+                        </form>
 
                     </div>
                 </section>
