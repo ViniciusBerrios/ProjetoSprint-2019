@@ -62,7 +62,10 @@ export default class CadastraConsulta extends Component {
             }
         })
         .then(response => response)
-        .then(data => console.log(data))
+        .then(data => {
+            this.props.history.push('/listaConsulta');
+            console.log(data);
+        })
         .catch(erro => console.log(erro))
     }
 
@@ -95,7 +98,7 @@ export default class CadastraConsulta extends Component {
 
                             <div className="dataInput">
                                 <label>Data Consulta</label>
-                                <input id="data" type="date" value={this.state.dataConsulta} onChange={this.atualizaEstadoDataConsultaForm} placeholder="Data da Consulta" />
+                                <input id="data" type="DateTime-Local" value={this.state.dataConsulta} onChange={this.atualizaEstadoDataConsultaForm} placeholder="Data da Consulta" />
                             </div>
 
                             <div className="situacaoInput">

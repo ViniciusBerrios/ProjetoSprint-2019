@@ -156,3 +156,84 @@
     color: black;
     border: 2px solid black;
   }
+
+  @media (max-width: 600px){
+
+    .fundo img{
+        height: 150px;    
+    }
+
+    .logo img{
+        height: 70px;
+        width: 70px;
+        margin-top: -120px;
+    }
+
+    .titulo{
+        font-size: 0.7em;
+        margin-left: 20px;
+        margin-top: -40px;
+    }
+
+    .medicos img{
+        height: 100px;
+        margin-left: 200px;
+        width: 200px;
+        margin-top: -90px;
+    }
+
+    .telefone img{
+        display: none;
+    }
+
+    .telefone h2{
+        display: none;
+    }
+
+    .redessociais{
+        display: none;
+    }
+
+    .quadrado{
+        height: 50px;
+        margin-top: -10px;
+    }
+
+    .quadrado ul{
+        font-size: 1.4em;
+        margin-top: 12px;
+        margin-left: 20px;
+    }
+
+    .quadrado2{
+        height: 70px;
+        margin-top: 30px;
+        width: 500px;
+        margin-left: 30px;
+    }
+
+    .quadrado2 h3{
+        display: none;
+    }
+
+    .quadrado2 ul{
+        font-size: 0.9em;
+        margin-left: -15px;
+    }
+
+    .quadrado2 li{
+        padding-left: 15px;
+        margin-top: 25px;
+    }
+
+    .quadrado3{
+        height: 500px;
+        width: 490px;
+        margin-left: 35px;
+        margin-top: 10px;
+    }
+
+    #tabela{
+        font-size: 9px;
+    }
+}
