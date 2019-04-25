@@ -175,3 +175,59 @@
     margin-top: 50px;
     font-size: 1.7em;
 }
+
+@media (max-width: 600px){
+
+    .quadrado4{
+        height: 500px;
+        margin-left: 60px;
+        width: 450px;
+    }
+
+    .loga h3{
+        font-size: 3em;
+        margin-left: 160px;
+    }
+
+    .emailInput{
+        font-size: 1.5em;
+        margin-left: 85px;
+    }
+
+    .senhaInput{
+        font-size: 1.5em;
+        margin-left: 85px;
+    }
+
+    .emailInput input{
+        height: 35px;
+        width: 180px;
+        padding-top: 10px;
+    }
+
+    .senhaInput input{
+        height: 35px;
+        width: 180px;
+        padding-top: 10px;
+        margin-left: 6px;
+    }
+
+    .loga p{
+        margin-left: 210px;
+        font-size: 0.8em;
+    }
+
+    .botao_entrar input{
+        height: 35px;
+        width: 200px;
+        font-size: 1.3em;
+        margin-left: 140px;
+    }
+
+    .botao_cadastra input{
+        height: 35px;
+        width: 200px;
+        font-size: 1.3em;
+        margin-left: 140px;
+    }
+}

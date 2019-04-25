@@ -59,7 +59,7 @@ export default class App extends Component {
 
         <div className="senhaInput">
                 <label>Senha:</label>
-                <input id="senha" type="text" value={this.state.senha} onChange={this.atualizaEstadoSenha.bind(this)} />
+                <input id="senha" type="password" value={this.state.senha} onChange={this.atualizaEstadoSenha.bind(this)} />
         </div>
 
         <p>Esqueceu sua Senha?</p>

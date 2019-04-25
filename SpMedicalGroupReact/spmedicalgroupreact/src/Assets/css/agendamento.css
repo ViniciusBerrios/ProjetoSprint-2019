@@ -206,4 +206,82 @@
     margin-top: 50px;
     font-size: 1.4em;
 }
-  
+
+@media (max-width: 600px){
+    .quadrado5{
+        height: 550px;
+        width: 450px;
+        margin-left: 55px;
+        margin-top: 30px;
+    }
+
+    .fundo2 h3{
+        font-size: 1.8em;
+        margin-left: 40px;
+    }
+
+    .quadrado5 h4{
+        font-size: 2em;
+        margin-left: 135px;
+    }
+
+    .prontuarioInput{
+        margin-left: 55px;
+        font-size: 1.2em;
+        padding-top: 40px;
+    }
+
+    .prontuarioInput input{
+        height: 33px;
+        width: 220px;
+    }
+
+    .medicoInput {
+        margin-left: 55px;
+        font-size: 1.2em;
+    }
+
+    .medicoInput input{
+        height: 33px;
+        width: 220px;
+        margin-left: 27px;
+    }
+
+    .dataInput{
+        margin-left: 55px;
+        font-size: 1.2em;
+    }
+
+    .dataInput input{
+        height: 33px;
+        width: 187px;
+    }
+
+    .situacaoInput{
+        margin-left: 55px;
+        font-size: 1.2em;
+    }
+
+    .situacaoInput input{
+        height: 33px;
+        width: 220px;
+        margin-left: 23px;
+    }
+
+    .descricaoInput{
+        margin-left: 55px;
+        font-size: 1.2em;
+    }
+
+    .descricaoInput input{
+        height: 33px;
+        width: 220px;
+        margin-left: 10px;
+    }
+
+    .botao_enviar button{
+        height:40px;
+        width: 150px;
+        margin-left: 160px;
+    }
+}
