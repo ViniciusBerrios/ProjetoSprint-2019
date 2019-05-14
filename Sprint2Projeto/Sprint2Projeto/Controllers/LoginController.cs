@@ -43,7 +43,7 @@ namespace Sprint2Projeto.Controllers
                     new Claim(JwtRegisteredClaimNames.Email, usuario.Email),
                     new Claim(JwtRegisteredClaimNames.Jti, usuario.Id.ToString()),
                     new Claim(ClaimTypes.Role, usuario.IdTipoUsuarioNavigation.Nome),
-                };
+                };      
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("Sprint2Projeto-chave-autenticacao"));
 
