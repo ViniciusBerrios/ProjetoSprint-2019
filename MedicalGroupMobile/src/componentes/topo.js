@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
         height: 80,
         width:70,
         marginLeft: 185,
-        marginTop: -90
+        marginTop: -90,
+        resizeMode: "contain"
     }
 })
 
