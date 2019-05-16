@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
     logo:{
         height: 80,
         width:70,
-        marginLeft: 185,
+        marginLeft: 175,
         marginTop: -90,
-        resizeMode: "contain"
+        resizeMode: "contain",
     }
 })
 
