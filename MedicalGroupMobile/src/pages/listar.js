@@ -35,14 +35,6 @@ class listar extends Component{
             
             <View style={styles.quadrado3}>
                 <Text style={styles.tituluzinho}>Sua Consulta</Text>
-            
-            <View style={styles.listinha}>
-                <Text style={styles.pro}>Prontuário</Text>
-                <Text style={styles.med}>Médico</Text>
-                <Text style={styles.dat}>Data Consulta</Text>
-                <Text style={styles.sit}>Situação</Text>
-                <Text style={styles.des}>Descrição</Text>
-            </View>
 
             </View>
 
@@ -59,26 +51,32 @@ class listar extends Component{
     }
 
     renderizaItem = ({item}) => (
-        <View style={styles.listaCompleta}>
-            <View>
+        <View>
+            <View style={styles.alinha}>
+                <Text style={styles.Prontuario}>{"Prontuário:"}</Text>
                 <Text style={styles.IdProntuarioo}>{item.idProntuario}</Text>
             </View>
 
-            <View>
+            <View style={styles.alinha}>
+                <Text style={styles.Medico}>{"Médico:"}</Text>
                 <Text style={styles.IdMedicoo}>{item.idMedico}</Text>
             </View>
 
-            <View>
+            <View style={styles.alinha}>
+                <Text style={styles.dataConsulta}>{"Data Consulta:"}</Text>
                 <Text style={styles.dataConsultaa}>{item.dataConsulta}</Text>
             </View>
 
-            <View>
+            <View style={styles.alinha}>
+                <Text style={styles.situacao}>{"Situação:"}</Text>
                 <Text style={styles.IdSituacaoo}>{item.idSituacao}</Text>
             </View>
 
-            <View>
+            <View style={styles.alinha}>
+                <Text style={styles.descricao}>{"Descrição:"}</Text>
                 <Text style={styles.descricaoo}>{item.descricao}</Text>
             </View>
+            <View style={styles.linha}></View>
         </View>
     )
 }
@@ -87,81 +85,93 @@ const styles = StyleSheet.create({
     quadrado3:{
         backgroundColor:"#2C914D",
         borderRadius: 10,
-        height:70,
+        height:50,
         width: 370,
         marginLeft: 20,
-        marginTop: 30
+        marginTop: 35
     },
     tituluzinho:{
         textAlign:"center",
         color: "white",
         fontSize:23,
-        marginTop:5
-    },
-    listinha:{
-        flexDirection: "row",
-        marginTop:6,
-        paddingLeft:15
-    },
-    pro:{
-        color:"white",
-        fontSize:14
-    },
-    med:{
-        color:"white",
-        fontSize:14,
-        marginLeft:5
-    },
-    dat:{
-        color:"white",
-        fontSize:14,
-        marginLeft:5
-    },
-    sit:{
-        color:"white",
-        fontSize:14,
-        marginLeft:5
-    },
-    des:{
-        color:"white",
-        fontSize:14,
-        marginLeft:5
+        marginTop:8
     },
     quadrado4:{
         backgroundColor:"#2C914D",
         borderRadius:10,
-        height:365,
+        height:382,
         width:370,
         marginLeft:20,
-        marginTop:15
-    },
-    listaCompleta:{
-        flexDirection: "row"
+        marginTop:25
     },
     IdProntuarioo:{
-        color:"white",
-        fontSize:16,
-        marginLeft:23
+        color:"black",
+        fontSize:18,
+        marginLeft:130,
+        marginTop:-26
     },
     IdMedicoo:{
-        color:"white",
-        fontSize:16,
-        marginLeft:12
+        color:"black",
+        fontSize:18,
+        marginLeft:130,
+        marginTop:-26
     },
     dataConsultaa:{
-        color:"white",
-        fontSize:16,
-        marginLeft:12
+        color:"black",
+        fontSize:18,
+        marginLeft:130,
+        marginTop:-26
     },
     IdSituacaoo:{
-        color:"white",
-        fontSize:16,
-        marginLeft:12
+        color:"black",
+        fontSize:18,
+        marginLeft:130,
+        marginTop:-26
     },
     descricaoo:{
+        color:"black",
+        fontSize:18,
+        marginLeft: 130,
+        marginTop:-26
+    },
+    Prontuario:{
         color:"white",
-        fontSize:16,
-        marginLeft:12
+        fontSize:20,
+        marginLeft:-210,
+        marginTop:10
+    },
+    Medico:{
+        color:"white",
+        fontSize:20,
+        marginLeft:-210,
+        marginTop:8
+    },
+    dataConsulta:{
+        color:"white",
+        fontSize:20,
+        marginLeft:-210,
+        marginTop:8
+    },
+    situacao:{
+        color:"white",
+        fontSize:20,
+        marginLeft:-210,
+        marginTop:8
+    },
+    descricao:{
+        color:"white",
+        fontSize:20,
+        marginLeft:-210,
+        marginTop:8
+    },
+    alinha:{
+        alignItems:"center"
+    },
+    linha:{
+        height: 5,
+        width: 700,
+        backgroundColor:"white",
+        marginTop: 16,
     }
 
 })
