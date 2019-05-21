@@ -4,9 +4,10 @@ import Cadastrar from './pages/cadastrar';
 
 import { createBottomTabNavigator, createAppContainer, createStackNavigator, createSwitchNavigator} from "react-navigation";
 
+const AuthStack = createStackNavigator({Login});
+
 const MainNavigator = createBottomTabNavigator(
     {
-        Login,
         Listar,
         Cadastrar
     },
@@ -33,7 +34,8 @@ const MainNavigator = createBottomTabNavigator(
 
 export default createAppContainer(createSwitchNavigator(
     {
-        MainNavigator
+        MainNavigator,
+        AuthStack
     },
-    {initialRouteName:"MainNavigator"}
+    {initialRouteName:"AuthStack"}
 ));

@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {Text, Image, StyleSheet, View, FlatList, TouchableOpacity, AsyncStorage} from "react-native";
 import Topo from '../componentes/topo';
 import { TextInput } from 'react-native-gesture-handler';
-
+import jwt from 'jwt-decode';
 import api from '../services/api';
 
 class cadastrar extends Component{
@@ -17,28 +17,34 @@ class cadastrar extends Component{
             ,descricao:""
         }
     }
-    cadastrarConsulta = async() =>{
-        const token = await AsyncStorage.getItem("Sprint2Projeto");
 
-        fetch('http://192.168.3.114:5000/api/Consultas', {
-            method: 'POST',
-            body: JSON.stringify({
-                idProntuario: this.state.idProntuario,
-                idMedico: this.state.idMedico,
-                dataConsulta: this.state.dataConsulta,
-                idSituacao: this.state.idSituacao,
-                descricao: this.state.descricao
-            }),
-            headers: {
-                'Authorization': 'Bearer ' + token
+    cadastrarConsulta = async() =>{
+
+        const resposta = await api.post("/Consultas",{
+            idProntuario: this.state.idProntuario,
+            idMedico: this.state.idMedico,
+            dataConsulta: this.state.dataConsulta,
+            idSituacao: this.state.idSituacao,
+            descricao: this.state.descricao
+        });
+        console.warn(resposta);
+    }
+
+    buscarDados = async ()=>{
+        try{
+            const value = await AsyncStorage.getItem("Sprint2Projeto");
+            if(value != null){
+                this.setState({IdUsuario:jwt(value).Id})
+                this.setState({token:value})
+                console.warn(value);
             }
-        })
-        .then(resposta => resposta.json())
-        .then(data => {
-            this.props.history.push('/listar');
-            console.log(data);
-        })
-        .catch(erro => console.log(erro))
+        } catch(error){
+
+        }
+    }
+
+    componentDidMount(){
+        this.buscarDados();
     }
 
     render(){
@@ -52,17 +58,17 @@ class cadastrar extends Component{
             <View style={styles.quadradoo}>
                 <Text style={styles.tituloo}>Atendimento</Text>
 
-                <TextInput style={styles.input} onChangeText={prontuario=>this.setState({prontuario})} placeholder="Prontuário"/>
+                <TextInput style={styles.input} onChangeText={idProntuario=>this.setState({idProntuario})} placeholder="Prontuário"/>
 
-                <TextInput style={styles.input} onChangeText={medico=>this.setState({medico})} placeholder="Médico"/>
+                <TextInput style={styles.input} onChangeText={idMedico=>this.setState({idMedico})} placeholder="Médico"/>
 
                 <TextInput style={styles.input} onChangeText={dataConsulta=>this.setState({dataConsulta})} placeholder="Data da Consulta"/>
 
-                <TextInput style={styles.input} onChangeText={situacao=>this.setState({situacao})} placeholder="Situação"/>
+                <TextInput style={styles.input} onChangeText={idSituacao=>this.setState({idSituacao})} placeholder="Situação"/>
 
                 <TextInput style={styles.input} onChangeText={descricao=>this.setState({descricao})} placeholder="Descrição"/>
 
-                <TouchableOpacity style={styles.button} onPress={this.cadastrar}>
+                <TouchableOpacity style={styles.button} onPress={this.cadastrarConsulta}>
                     <Text style={styles.buttontxt}>Cadastrar</Text>
                 </TouchableOpacity>
             </View>
