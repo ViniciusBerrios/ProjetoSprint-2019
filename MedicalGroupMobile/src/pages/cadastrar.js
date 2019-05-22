@@ -68,7 +68,7 @@ class cadastrar extends Component{
 
                 <TextInput style={styles.input} onChangeText={descricao=>this.setState({descricao})} placeholder="Descrição"/>
 
-                <TouchableOpacity style={styles.button} onPress={this.cadastrarConsulta}>
+                <TouchableOpacity style={styles.button} onPress={this.cadastrarConsulta }>
                     <Text style={styles.buttontxt}>Cadastrar</Text>
                 </TouchableOpacity>
             </View>

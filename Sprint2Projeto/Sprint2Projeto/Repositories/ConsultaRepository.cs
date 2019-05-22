@@ -1,4 +1,5 @@
-﻿using Sprint2Projeto.Domains;
+﻿using Microsoft.EntityFrameworkCore;
+using Sprint2Projeto.Domains;
 using Sprint2Projeto.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ namespace Sprint2Projeto.Repositories
                 {
                     ctx.Consultas.ToList();
 
-                    return ctx.Consultas.ToList();
+                    return ctx.Consultas.Include(x => x.IdProntuarioNavigation).Include(x=> x.IdMedicoNavigation).Include(x=> x.IdSituacaoNavigation).ToList();
                 }
 
                 if (idTipoUsuario == "Medico")
@@ -41,7 +42,7 @@ namespace Sprint2Projeto.Repositories
                     Medicos medico;
                     medico = ctx.Medicos.FirstOrDefault(x => x.IdUsuario == id);
 
-                    return ctx.Consultas.Where(x => x.IdMedico == medico.Id).ToList();
+                    return ctx.Consultas.Include(x => x.IdProntuarioNavigation).Include(x => x.IdMedicoNavigation).Include(x => x.IdSituacaoNavigation).Where(x => x.IdMedico == medico.Id).ToList();
                 }
 
                 if (idTipoUsuario == "Paciente")
@@ -49,7 +50,7 @@ namespace Sprint2Projeto.Repositories
                     Prontuario prontuario;
                     prontuario = ctx.Prontuario.FirstOrDefault(x => x.IdUsuario == id);
 
-                    return ctx.Consultas.Where(x => x.IdProntuario == prontuario.Id).ToList();
+                    return ctx.Consultas.Include(x => x.IdProntuarioNavigation).Include(x => x.IdMedicoNavigation).Include(x => x.IdSituacaoNavigation).Where(x => x.IdProntuario == prontuario.Id).ToList();
                 }
 
                 return null;

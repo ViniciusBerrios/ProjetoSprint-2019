@@ -54,12 +54,12 @@ class listar extends Component {
         <View>
             <View style={styles.alinha}>
                 <Text style={styles.Prontuario}>{"Prontuário:"}</Text>
-                <Text style={styles.IdProntuarioo}>{item.idProntuario}</Text>
+                <Text style={styles.IdProntuarioo}>{item.idProntuarioNavigation.nome}</Text>
             </View>
 
             <View style={styles.alinha}>
                 <Text style={styles.Medico}>{"Médico:"}</Text>
-                <Text style={styles.IdMedicoo}>{item.idMedico}</Text>
+                <Text style={styles.IdMedicoo}>{item.idMedicoNavigation.nome}</Text>
             </View>
 
             <View style={styles.alinha}>
@@ -69,7 +69,7 @@ class listar extends Component {
 
             <View style={styles.alinha}>
                 <Text style={styles.situacao}>{"Situação:"}</Text>
-                <Text style={styles.IdSituacaoo}>{item.idSituacao}</Text>
+                <Text style={styles.IdSituacaoo}>{item.idSituacaoNavigation.statu}</Text>
             </View>
 
             <View style={styles.alinha}>
