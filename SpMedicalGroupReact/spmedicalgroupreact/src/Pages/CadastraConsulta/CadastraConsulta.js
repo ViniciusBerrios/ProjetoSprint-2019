@@ -47,7 +47,7 @@ export default class CadastraConsulta extends Component {
         event.preventDefault();
         let token = localStorage.getItem("Sprint2Projeto");
 
-        fetch('http://localhost:5000/api/Consultas', {
+        fetch('http://192.168.3.114:5000/api/Consultas', {
             method: 'POST',
             body: JSON.stringify({
                 idProntuario: this.state.idProntuario,

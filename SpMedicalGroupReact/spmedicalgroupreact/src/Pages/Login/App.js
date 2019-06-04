@@ -23,7 +23,7 @@ export default class App extends Component {
 
     fazerLogin(event){
         event.preventDefault();
-        Axios.post('http://localhost:5000/api/Login',{
+        Axios.post('http://192.168.3.114:5000/api/Login',{
             email: this.state.email,
             senha: this.state.senha
         })

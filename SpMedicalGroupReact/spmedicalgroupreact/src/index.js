@@ -8,6 +8,7 @@ import {usuarioAutenticado} from './services/auth';
 import{Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-dom';
 import CadastraConsulta from './Pages/CadastraConsulta/CadastraConsulta';
 import ListaConsulta from './Pages/ListaConsulta/ListaConsulta';
+import DadosSistema from './Pages/DadosSistema/DadosSistema';
 
 const Permissao = ({component : Component}) => (
      <Route 
@@ -25,6 +26,7 @@ const rotas = (
                 <Route exact path="/" component={App} />
                 <Permissao path="/cadastraconsulta" component={CadastraConsulta} />
                 <Permissao path="/listaconsulta" component={ListaConsulta} />
+                <Permissao path="/dadossistema" component={DadosSistema} />
                 <Route component={NaoEncontrada} />
             </Switch>
         </div>

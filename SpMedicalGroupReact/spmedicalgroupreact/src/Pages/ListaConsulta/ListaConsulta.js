@@ -19,7 +19,7 @@ export default class ListaConsulta extends Component{
 
     buscaConsultas(){
         let token = localStorage.getItem("Sprint2Projeto");
-        fetch('http://localhost:5000/api/Consultas',{
+        fetch('http://192.168.3.114:5000/api/Consultas',{
             headers: {
                 'Authorization' : 'Bearer ' + token
             }
@@ -62,10 +62,10 @@ export default class ListaConsulta extends Component{
                 this.state.lista.map(function(consulta){
                     return(
                         <tr key={consulta.id}>
-                            <td>{consulta.idProntuario}</td>
-                            <td>{consulta.idMedico}</td>
+                            <td>{consulta.idProntuarioNavigation.nome}</td>
+                            <td>{consulta.idMedicoNavigation.nome}</td>
                             <td>{consulta.dataConsulta}</td>
-                            <td>{consulta.idSituacao}</td>
+                            <td>{consulta.idSituacaoNavigation.statu}</td>
                             <td>{consulta.descricao}</td>
                         </tr>
                     )
