@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.quadrado8{
+    height: 1300px;
+    width: 1150px;
+    background-color: #5F9EA0;
+    margin-top: 50px;
+    margin-left: 200px;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+}
+
+.quadrado8 h1{
+    color: white;
+    margin-left: 250px;
+    font-size: 3em;
+    margin-top: 30px;
+    text-shadow: 1px 1px black;
+}
+
+.dados{
+    flex-direction: column;
+    display: flex;
+}
+
+.longitude_input{
+    margin-left: 400px;
+    margin-top: 40px;
+}
+
+.longitude_input input{
+    border-radius: 10px;
+    height: 43px;
+    width: 350px;
+    font-size: 1.7em;
+}
+
+.latitude_input{
+    margin-left: 400px;
+    margin-top: 40px;
+}
+
+.latitude_input input{
+    border-radius: 10px;
+    height: 43px;
+    width: 350px;
+    font-size: 1.7em;
+}
+
+.idade_input{
+    margin-left: 400px;
+    margin-top: 40px;
+}
+
+.idade_input input{
+    border-radius: 10px;
+    height: 43px;
+    width: 350px;
+    font-size: 1.7em;
+}
+
+.especialidade_input{
+    margin-left: 400px;
+    margin-top: 40px;
+}
+
+.especialidade_input input{
+    border-radius: 10px;
+    height: 43px;
+    width: 350px;
+    font-size: 1.7em;
+}
+
+.doenca_input{
+    margin-left: 400px;
+    margin-top: 40px;
+}
+
+.doenca_input input{
+    border-radius: 10px;
+    height: 43px;
+    width: 350px;
+    font-size: 1.7em;
+}
+
+.botazinho_enviar button{
+    margin-left: 480px;
+    margin-top: 40px;
+    background: #53C160;
+    height: 45px;
+    width: 200px;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.4em;
+}
+
+#tabela2{
+    text-align: center;
+    width: 80%;
+    color: white;
+    font-size: 20px;
+    table-layout: fixed;
+    margin-left: 115px;
+    margin-top: 50px;
+}
+
+#tabela2 td,
+#tabela2 th{
+    border: 2px solid white;
+    padding: 15px;
+}
+
+#tabela2 tr:hover{
+    background-color: #446275;
+}
+
+.listagem2 h2{
+    color: white;
+    font-size: 3em;
+    margin-top: 70px;
+    margin-left: 405px;
+}
