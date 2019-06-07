@@ -75,6 +75,21 @@ export default class DadosSistema extends Component{
         })
     }
 
+    delete(event){
+        event.preventDefault();
+
+        if(window.confirm("Quer apagar mesmo?")){
+            firebase.firestore().collection("analise")
+                .doc(event.target.id)
+                .delete()
+                .then((result) =>{
+                    alert("Dados Apagado");
+                }).catch((erro) =>{
+                    console.log('erro', erro)
+                })
+        }
+    }
+
     render(){
         return(
             <div>
@@ -131,6 +146,7 @@ export default class DadosSistema extends Component{
                         <td>{analises.IdadePaciente}</td>
                         <td>{analises.EspecialidadeMedico}</td>
                         <td>{analises.DoencaPaciente}</td>
+                        <button id={analises.id} onClick={this.delete.bind(this)}>Apagar</button>
                         </tr>
                     );
                 })
